@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6F3"
+    tools:context="br.com.joguelimpocomosanimais.Activity.Perfil">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fotoCadastroPerfil"
+        android:layout_width="168dp"
+        android:layout_height="99dp"
+        android:layout_marginLeft="90dp"
+        android:src="@drawable/c_pessoa"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="0dp" />
+
+    <LinearLayout
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+
+            android:id="@+id/imageGaleria"
+            android:layout_width="53dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="30dp"
+
+
+            app:srcCompat="@drawable/fotogaleria" />
+
+        <ImageButton
+
+            android:id="@+id/imageCamera"
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/camera" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="394dp"
+        android:layout_height="117dp"
+        android:background="#F3F8F8"
+        android:orientation="horizontal"
+        android:padding="16dp"
+
+        android:paddingBottom="0dp">
+
+        <EditText
+            android:id="@+id/editNomeUsario"
+            android:layout_width="346dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:ems="10" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Esse nome ficará visivel para se comunicar com seu amigos do Joque Limpo com os
+animais" />
+
+    <Button
+        android:id="@+id/butaoAtualizarNomePerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar" />
+</LinearLayout>

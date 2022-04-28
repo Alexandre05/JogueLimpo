@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#C2F1C4"
+    android:layout_height="match_parent"
+    tools:context="br.com.joguelimpocomosanimais.Activity.CadastrarAnimais">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageCada1"
+            android:layout_width="194dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/camera"
+
+            app:civ_border_color="#FF000000" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageCada2"
+            android:layout_width="179dp"
+            android:layout_height="100dp"
+            android:src="@drawable/camera" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Spinner
+
+            android:id="@+id/tipoAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             />
+
+        <Spinner
+            android:id="@+id/cidade"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custonnoecao"
+        android:ems="10"
+        android:hint="Nome DoPet"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/editRaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custonnoecao"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Raça" />
+
+    <EditText
+
+        android:id="@+id/editPorte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custonnoecao"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Porte" />
+    <EditText
+
+        android:id="@+id/editObs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custonnoecao"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Observações" />
+
+    <EditText
+
+        android:id="@+id/editNomeDoador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custonnoecao"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint=" Nome Responsável " />
+
+
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/fone"
+        android:padding="10dp"
+        android:layout_width="388dp"
+        android:layout_height="44dp"
+        android:background="@drawable/custonnoecao"
+        android:hint="Telefone Contato Doador"
+        android:inputType="phone"
+        app:mask="(##) #####_####"
+       android:layout_marginBottom="10dp"
+        app:maskStyle="completable" />
+    <Button
+
+        android:id="@+id/SalvarA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="validarAnuncio"
+        android:text="Cadastrar Pet"
+        android:background="@drawable/botoaentrar"
+        android:theme="@style/Theme.AppCompat.Dialog.MinWidth"
+        tools:ignore="OnClick" />
+
+</LinearLayout>

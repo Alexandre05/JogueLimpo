@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "602254882446",
+    "project_id": "jlimpo",
+    "storage_bucket": "jlimpo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602254882446:android:5d0aa4f6844bced857bbdf",
+        "android_client_info": {
+          "package_name": "br.com.joguelimpocomosanimais"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602254882446-hbadtbnh6mjg0re94jksvae7grcv9lg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.joguelimpocomosanimais",
+            "certificate_hash": "f8c7dcb288d0336ab3048aa15511880a6e3bd530"
+          }
+        },
+        {
+          "client_id": "602254882446-dgchsfqpp1oel2t222c9pkmbd45g8i9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKehEn3zAH4X1BsnQVoU3UEXPJCpQY8ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602254882446-dgchsfqpp1oel2t222c9pkmbd45g8i9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

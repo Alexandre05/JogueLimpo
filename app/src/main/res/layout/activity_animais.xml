@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="#FDF6EC"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#FDF6EC"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAnimal"
+            style="?attr/buttonBarButtonStyle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FDF6EC"
+            android:drawableLeft="@android:drawable/ic_search_category_default"
+
+            android:isScrollContainer="false"
+            android:onClick="filtrarPorAnimal"
+            android:text="Animais "
+            android:textColor="#030B57"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0B0000"
+            android:text="|"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnBairro"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FDF6EC"
+            android:drawableLeft="@android:drawable/ic_search_category_default"
+            android:onClick="filtrarBairro"
+            android:text="Bairro"
+            android:textColor="#030B57"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ryclePublico"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

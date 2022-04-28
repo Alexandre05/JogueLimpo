@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.joguelimpocomosanimais">
+    <!-- Permissoes internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissoes galeria / camera -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JogueLimpoComOsAnimais">
+        <activity
+            android:name=".Activity.Cadastrar"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Animais"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CadastrarAnimais"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Chat"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Conversas"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetalhesAc"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditarDadosAnuncios"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MeusAnimais"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RecuperarSenha"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TelaSplach"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Login"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.JogueLimpoComOsAnimais.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
