@@ -53,6 +53,7 @@ import br.com.joguelimpocomosanimais.Model.Notificacao;
 import br.com.joguelimpocomosanimais.Model.NotificacaoDados;
 import br.com.joguelimpocomosanimais.Model.Usuario;
 import br.com.joguelimpocomosanimais.R;
+import kotlinx.coroutines.internal.AtomicKt;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -79,6 +80,7 @@ public class Conversas extends AppCompatActivity {
     private String idUsuarioRemente;
     private String idUsuarioDestinatario;
     private DatabaseReference database;
+    private  DatabaseReference usuarioRef;
 
     private List<Mensagem> mensagens = new ArrayList<>();
     private static final int seleCame = 100;
@@ -283,9 +285,8 @@ public class Conversas extends AppCompatActivity {
 
  public  void EnviarNoti(){
 
-
      String token="";
-     String to="";// configura Topico ou token
+     String to;
      to=token;
      Notificacao notificacao = new Notificacao("Titulo da notificação","Corpo Notificação");
 // montando notificação
