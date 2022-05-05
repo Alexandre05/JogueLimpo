@@ -29,19 +29,10 @@ import br.com.joguelimpocomosanimais.Model.Usuario;
 import br.com.joguelimpocomosanimais.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContatosT01#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class ContatosT01 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private  RecyclerView r;
     private AdpterContatos adapter;
     private ArrayList<Usuario> listaContatos= new ArrayList<>();
@@ -54,34 +45,22 @@ public class ContatosT01 extends Fragment {
     }
 
 
-    public static ContatosT01 newInstance(String param1, String param2) {
-        ContatosT01 fragment = new ContatosT01();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
 
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_teste01, container, false);
+        View view= inflater.inflate(R.layout.fragment_contatos, container, false);
 
-       user= ConFirebase.getUsuarioAtaul();
+
         adapter= new AdpterContatos(listaContatos,getActivity());
 
 
         // configurar recyclerview
         r = view.findViewById(R.id.recyListaContatos);
-        usuarioRef= ConFirebase.getFirebaseDatabase().child("Perfil");
+        usuarioRef= ConFirebase.getFirebaseDatabase().child("usuarios");
+        user= ConFirebase.getUsuarioAtaul();
         RecyclerView.LayoutManager layoutManager =  new LinearLayoutManager(getActivity());
         r.setLayoutManager(layoutManager);
         r.setHasFixedSize(true);
@@ -95,7 +74,7 @@ public class ContatosT01 extends Fragment {
                    public void onItemClick(View view, int position) {
                        Usuario usuarioSele = listaContatos.get(position);
                        Intent intent= new Intent(getActivity(), Conversas.class);
-                       intent.putExtra("chatContato",usuarioSele);
+                       intent.putExtra("chatContatos",usuarioSele);
                        startActivity(intent);
                    }
 

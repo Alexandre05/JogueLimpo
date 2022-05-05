@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.joguelimpo.Fragment.ConversaFragment">
+   >
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyListaCon"
+        android:id="@+id/recyListaConversas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 </LinearLayout>

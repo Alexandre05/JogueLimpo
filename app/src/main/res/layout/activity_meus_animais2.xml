@@ -12,14 +12,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.AppCompat.Dialog.MinWidth">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:popupTheme="@style/Theme.AppCompat.Dialog.MinWidth" />
-
+        <include layout="@layout/toobar"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

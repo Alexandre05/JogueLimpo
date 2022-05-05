@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -27,6 +28,16 @@ public class Usuario implements Serializable {
     private String endereco;
     private String email;
     private String senha;
+    private String token;
+ private FirebaseUser user;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public String getFoto() {
         return foto;
@@ -61,12 +72,13 @@ public class Usuario implements Serializable {
                 .setValue(this);
         Perfil();
 
+
     }
 
-    public void Perfil() {
+        public void Perfil() {
         DatabaseReference refe = ConFirebase.getFirebaseDatabase();
 
-        refe.child("Perfil")
+        refe.child("usuarios")
 
                 .child(getIdU())
 
@@ -78,7 +90,7 @@ public class Usuario implements Serializable {
     public void atualizar() {
         String indeUsu = ConFirebase.getIdentificarUsaurio();
         DatabaseReference database = ConFirebase.getFirebaseDatabase();
-        DatabaseReference usuarioRef = database.child("Perfil")
+        DatabaseReference usuarioRef = database.child("usuarios")
                 .child(indeUsu);
         Map<String, Object> valoeresUsuario = converterParaMap();
 

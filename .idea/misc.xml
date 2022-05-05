@@ -5,24 +5,36 @@
       <map>
         <entry key="..\:/Users/PC/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/drawable-v24/camera.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/drawable-v24/custonboentrar.xml" value="0.196" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/drawable-v24/custoncadastra.xml" value="0.1765" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/drawable-v24/send.xml" value="0.184" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_animais.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_cadastrar.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_cadastrar_animais.xml" value="0.13125" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_chat.xml" value="0.115625" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_conversas.xml" value="0.115625" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_detalhes.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_editar_dados_anuncios.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_meus_animais2.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/activity_tela_splach.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adapter_anuncio.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adapter_contato.xml" value="0.14166666666666666" />
-        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adpter_mensagem_destino.xml" value="0.14166666666666666" />
-        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adpter_mensagem_remete.xml" value="0.14166666666666666" />
-        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/content_conversas.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adapter_contato.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adpter_mensagem_destino.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/adpter_mensagem_remete.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/content_conversas.xml" value="0.25" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/content_main.xml" value="0.14166666666666666" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/content_meus_animais.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/content_meus_animais2.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/dialo_spiner.xml" value="0.1" />
-        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/toobar.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/divisor.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_contatos.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_conversa.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_first.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_first2.xml" value="0.1" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_teste01.xml" value="0.25" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/fragment_teste02.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/layout/toobar.xml" value="0.1" />
         <entry key="..\:/Users/PC/Desktop/JogueLimpoComOsAnimais/app/src/main/res/menu/menu_main.xml" value="0.18" />
       </map>
     </option>

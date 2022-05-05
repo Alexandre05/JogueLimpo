@@ -41,14 +41,10 @@ public class Chat extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         viewPager= findViewById(R.id.viewPager);
         smartTabLayout= findViewById(R.id.viewPagerTab);
-        baseUrl="https://fcm.googleapis.com/fcm/";
-        retrofit= new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setTitle("Chat J.L.A");
+        getSupportActionBar().setTitle("Pet Zaap");
 
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
 

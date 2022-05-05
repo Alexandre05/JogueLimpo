@@ -46,11 +46,12 @@ public class ConversaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_conversa, container, false);
-        recyclerViewC = view.findViewById(R.id.recyListaCon);
+        recyclerViewC = view.findViewById(R.id.recyListaConversas);
 
         adpter = new ConversaAdpter(listasConversas, getActivity());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerViewC.setLayoutManager(layoutManager);
+        
         recyclerViewC.setHasFixedSize(true);
         recyclerViewC.setAdapter(adpter);
 
@@ -58,13 +59,14 @@ public class ConversaFragment extends Fragment {
   recyclerViewC.addOnItemTouchListener(new RecyclerItemClickListener(
           getActivity(),
           recyclerViewC,
+
           new RecyclerItemClickListener.OnItemClickListener() {
               @Override
               public void onItemClick(View view, int position) {
-                  ConversaAssunto conversaAssunto= listasConversas.get(position);
+                  ConversaAssunto converSelecionada= listasConversas.get(position);
 
                   Intent i = new Intent(getActivity(), Conversas.class);
-                  i.putExtra("chatContato",conversaAssunto.getUruarioExibicao());
+                  i.putExtra("chatContatos",converSelecionada.getUruarioExibicao());
                   startActivity(i);
 
 
@@ -79,14 +81,20 @@ public class ConversaFragment extends Fragment {
               public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
               }
+
+
           }
 
+
   ));
+
+
 
         String ideUsarui = ConFirebase.getIdentificarUsaurio();
         data = ConFirebase.getFirebaseDatabase();
         conversaRef = data.child("conversas")
                 .child(ideUsarui);
+
 
 
         return view;
@@ -96,6 +104,10 @@ public class ConversaFragment extends Fragment {
     public void onStart() {
         super.onStart();
         recuparConversar();
+        recyclerViewC.scrollToPosition(listasConversas.size()-1);
+
+
+
     }
 
     @Override
@@ -117,6 +129,7 @@ public class ConversaFragment extends Fragment {
                 ConversaAssunto conversa = dataSnapshot.getValue( ConversaAssunto.class );
                 listasConversas.add( conversa );
                 adpter.notifyDataSetChanged();
+
 
             }
 

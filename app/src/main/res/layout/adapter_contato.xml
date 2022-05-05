@@ -36,7 +36,7 @@
             <TextView
                 android:id="@+id/ultimaContato"
                 android:layout_width="match_parent"
-
+                 android:text="email"
                 android:layout_height="wrap_content"
                 />
         </LinearLayout>

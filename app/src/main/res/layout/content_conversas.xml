@@ -43,7 +43,7 @@
             android:paddingRight="16dp">
 
             <EditText
-                android:id="@+id/EscreveMensagem"
+                android:id="@+id/EditeMensagem"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:onClick="Enviar"
+            android:onClick="EnviarMensagem"
             app:backgroundTint="#448AFF"
             app:fabSize="mini"
             app:srcCompat="@drawable/send" />

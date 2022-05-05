@@ -38,6 +38,7 @@ public class AdpterContatos extends RecyclerView.Adapter<AdpterContatos.MyVilHol
     public void onBindViewHolder(@NonNull MyVilHolder holder, int position) {
      Usuario usuario = contatos.get(position);
 holder.nome.setText(usuario.getNome());
+holder.ultima.setText(usuario.getEmail());
 
 if(usuario.getFoto()!=null){
     Uri uri = Uri.parse(usuario.getFoto());
@@ -59,12 +60,13 @@ if(usuario.getFoto()!=null){
 
     public  class MyVilHolder extends RecyclerView.ViewHolder{
         CircleImageView foto;
-        TextView nome;
+        TextView nome,ultima;
 
         public MyVilHolder(@NonNull View itemView) {
             super(itemView);
             foto=itemView.findViewById(R.id.imageContato);
             nome= itemView.findViewById(R.id.nomeContato);
+            ultima=itemView.findViewById(R.id.ultimaContato);
         }
     }
 }

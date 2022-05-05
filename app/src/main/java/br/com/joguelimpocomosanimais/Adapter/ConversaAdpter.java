@@ -22,27 +22,28 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ConversaAdpter extends RecyclerView.Adapter<ConversaAdpter.MyVilHolder> {
 
-    private  List<ConversaAssunto> conversaA;
+    private  List<ConversaAssunto> conversas;
     private  Context context;
     public ConversaAdpter(List<ConversaAssunto> lista, Context c) {
-this.conversaA=lista;
+this.conversas=lista;
 this.context=c;
     }
 
 
     @Override
-    public MyVilHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyVilHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         View itemLista =LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_contato, parent, false);
         return new MyVilHolder(itemLista);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyVilHolder holder, int position) {
-    ConversaAssunto conversaAssunto = conversaA.get(position);
+    public void onBindViewHolder( MyVilHolder holder, int position) {
+    ConversaAssunto conversaAssunto = conversas.get(position);
     holder.ult.setText(conversaAssunto.getUltimaMensagem());
 
         Usuario u = conversaAssunto.getUruarioExibicao();
         holder.nome.setText(u.getNome());
+
 
 
         if(u.getFoto()!=null){
@@ -63,7 +64,7 @@ this.context=c;
 
     @Override
     public int getItemCount() {
-        return conversaA.size();
+        return conversas.size();
     }
 
     public  class  MyVilHolder extends  RecyclerView.ViewHolder{

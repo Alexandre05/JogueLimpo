@@ -59,7 +59,9 @@ public class Animais extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_animais);
-        Toolbar tolbar= findViewById(R.id.toolbar);
+        Toolbar tolbar= findViewById(R.id.Toolbar);
+        //tolbar.setTitle("Lista de animais");
+
 
 
 

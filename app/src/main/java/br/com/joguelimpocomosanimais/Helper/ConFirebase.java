@@ -37,8 +37,11 @@ public  static  String getIdUsuario(){
   public  static  DatabaseReference getFirebaseDatabase(){
 
     if (referenciaFarebase== null){
-
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
       referenciaFarebase= FirebaseDatabase.getInstance().getReference();
+
+
+
 
 
     }
@@ -70,13 +73,13 @@ public  static  String getIdUsuario(){
         FirebaseAuth usuario =  ConFirebase.getReferenciaAutencicacao();
 
         String email =usuario.getCurrentUser().getEmail();
-        String identifcaUsuario = br.com.joguelimpocomosanimais.Helper.Base64Custon.codificarBase64(email);
+        String identifcaUsuario = Base64Custon.codificarBase64(email);
         return  identifcaUsuario;
 
     }
      public  static FirebaseUser getUsuarioAtaul(){
      FirebaseAuth usuario = ConFirebase.getReferenciaAutencicacao();
-     String email = usuario.getCurrentUser().getEmail();
+     //String email = usuario.getCurrentUser().getEmail();
 
  return  usuario.getCurrentUser();
      }

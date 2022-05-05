@@ -72,7 +72,7 @@
         android:background="@drawable/custoncadastra"
         android:onClick="cadastroChamaAt"
         android:text="Cadastre-se"
-        android:textColor="#B10808"
+        android:textColor="#0C0000"
         app:rippleColor="@color/white" />
 
     <Button
@@ -82,6 +82,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/custoncadastra"
         android:gravity="center"
+
         android:onClick="recuperarSenha"
         android:text="Esqueci Senha"
         android:textColor="#9C2905" />

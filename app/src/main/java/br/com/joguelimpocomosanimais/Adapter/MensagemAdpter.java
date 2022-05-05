@@ -28,8 +28,8 @@ public class MensagemAdpter extends RecyclerView.Adapter<MensagemAdpter.MyvHolde
  private  static final int Tipo_remetente = 0;
     private  static final int Tipo_destinatario = 1;
 
-    public MensagemAdpter(List<Mensagem> lita, Context c) {
-     this.mensagens=lita;
+    public MensagemAdpter(List<Mensagem> lista, Context c) {
+     this.mensagens=lista;
      this.context=c;
     }
 
@@ -39,11 +39,7 @@ public class MensagemAdpter extends RecyclerView.Adapter<MensagemAdpter.MyvHolde
         View item=null;
        if(viewType==Tipo_remetente){
      item =LayoutInflater.from(parent.getContext()).inflate(R.layout.adpter_mensagem_remete, parent, false);
-
-
-
-
-       }else  if (viewType==Tipo_destinatario){
+    }else  if (viewType==Tipo_destinatario){
 
            item =LayoutInflater.from(parent.getContext()).inflate(R.layout.adpter_mensagem_destino, parent, false);
 
@@ -100,14 +96,14 @@ public class MensagemAdpter extends RecyclerView.Adapter<MensagemAdpter.MyvHolde
     }
 
     public class MyvHolder extends RecyclerView.ViewHolder{
-         TextView mensagem;
+         TextView mensagem,nome;
          ImageView imagem;
 
       public MyvHolder(@NonNull View itemView) {
           super(itemView);
 
-          mensagem = itemView.findViewById(R.id.MensagemDestino);
-          imagem=itemView.findViewById(R.id.imageDestino);
+          mensagem = itemView.findViewById(R.id.textMensagemTexto);
+          imagem   = itemView.findViewById(R.id.imageMensagemFoto);
       }
   }
 

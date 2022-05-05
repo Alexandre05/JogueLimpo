@@ -61,7 +61,7 @@ public class MeusAnimais extends AppCompatActivity {
 
 
         inicializarCompo();
-        setSupportActionBar(binding.toolbar);
+        //setSupportActionBar(binding.toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 

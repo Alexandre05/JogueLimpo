@@ -44,7 +44,7 @@ public class ConversaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_conversa, container, false);
-        recyclerViewC = view.findViewById(R.id.recyListaCon);
+        recyclerViewC = view.findViewById(R.id.recyListaConversas);
 
         adpter = new ConversaAdpter(listasConversas, getActivity());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());

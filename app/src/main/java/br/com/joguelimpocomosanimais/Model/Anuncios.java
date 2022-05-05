@@ -3,6 +3,7 @@ package br.com.joguelimpocomosanimais.Model;
 
 
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
 import java.util.List;
@@ -61,7 +62,9 @@ public class Anuncios  implements Serializable {
   }
   public  void  salvar(){
     String idUsuario= ConFirebase.getIdUsuario();
+
     DatabaseReference anuncioRefe= ConFirebase.getFirebaseDatabase()
+
 
             .child("anuncios");
     anuncioRefe.child(idUsuario)

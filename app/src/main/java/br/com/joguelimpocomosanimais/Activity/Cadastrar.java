@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -11,10 +12,14 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.firestore.auth.Token;
+import com.google.firebase.installations.FirebaseInstallations;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,14 +55,17 @@ public class Cadastrar extends AppCompatActivity {
 
         IniciConpo();
 
-         botaoCadastro.setOnClickListener(new View.OnClickListener() {
+
+        botaoCadastro.setOnClickListener(new View.OnClickListener() {
+
              @Override
              public void onClick(View v) {
                  String nome=campoNome.getText().toString();
                  String endereco= campoEndereco.getText().toString();
                  String email = campoEmail.getText().toString();
                  String senha = campoSenha.getText().toString();
-               // String repetirSenha= campoConfirmaSenha.toString();
+
+                 // String repetirSenha= campoConfirmaSenha.toString();
 
 
                  if(!nome.isEmpty()){
@@ -78,7 +86,21 @@ public class Cadastrar extends AppCompatActivity {
  usuario.setEndereco(endereco);
  usuario.setEmail(email);
  usuario.setSenha(senha);
- cadaatrarUsuario();
+                                   FirebaseMessaging.getInstance().getToken()
+                                           .addOnCompleteListener(new OnCompleteListener<String>() {
+                                               @Override
+                                               public void onComplete(@NonNull Task<String> task) {
+
+                                                   String token = task.getResult();
+                                                   usuario.setToken(token);
+                                               }
+                                           });
+
+
+
+
+
+                                   cadaatrarUsuario();
 
                                } else{
                                    Toast.makeText(Cadastrar.this,
@@ -124,6 +146,10 @@ public class Cadastrar extends AppCompatActivity {
 
 
 
+
+
+
+
     public void cadaatrarUsuario( ){
 
        autenticacao= ConFirebase.getReferenciaAutencicacao();
@@ -145,7 +171,9 @@ public class Cadastrar extends AppCompatActivity {
                         usuario.setIdU(idU);
 
                         usuario.SalvarU();
+
                        Usuario.getUsuarioAutal();
+
 
 
                                 finish();

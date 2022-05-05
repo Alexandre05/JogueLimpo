@@ -12,6 +12,8 @@ private String idDestinatario;
 
 private String ultimaMensagem;
 private Usuario uruarioExibicao;
+private Usuario user;
+
 
     public Usuario getUruarioExibicao() {
         return uruarioExibicao;
@@ -21,18 +23,32 @@ private Usuario uruarioExibicao;
         this.uruarioExibicao = uruarioExibicao;
     }
 
-    public  void salvar(){
-    DatabaseReference databaseReference=
-            ConFirebase.getFirebaseDatabase();
-    DatabaseReference conversaRef=
-            databaseReference.child("conversas");
-    conversaRef.child(this.getIdRemetente())
-            .child(this.getIdDestinatario())
-            .setValue(this);
+    public  void salvar() {
+        DatabaseReference databaseReference = ConFirebase.getFirebaseDatabase();
+        DatabaseReference conversaRef = databaseReference.child("conversas");
+
+        conversaRef
+                .child(this.getIdRemetente())
+                .child(this.getIdDestinatario())
+
+                .setValue(this);
+
 
 
 
 }
+    public void salvarConversaPrivadarUsuarioExibicaoOutro(){
+        DatabaseReference ref = ConFirebase.getFirebaseDatabase();
+        DatabaseReference conversaParearOutro = ref.child("conversas");
+        user = ConFirebase.getDadosUsarioLogado();
+        setUruarioExibicao(user);
+        conversaParearOutro.child(getIdDestinatario())
+                .child(getIdRemetente())
+                .setValue(this);
+    }
+
+
+
     public String getIdRemetente() {
         return idRemetente;
     }

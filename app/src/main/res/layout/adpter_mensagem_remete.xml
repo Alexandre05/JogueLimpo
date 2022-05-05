@@ -17,13 +17,13 @@
 
 
         <ImageView
-            android:id="@+id/imageDestino"
+            android:id="@+id/imageMensagemFoto"
             android:layout_width="wrap_content"
             android:layout_height="628dp"
             app:srcCompat="@drawable/tenor" />
 
         <TextView
-            android:id="@+id/MensagemDestino"
+            android:id="@+id/textMensagemTexto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 

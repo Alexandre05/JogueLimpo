@@ -3,7 +3,7 @@ package br.com.joguelimpocomosanimais.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ private CarouselView img;
 private EditText nomeUsuario;
     private ImageSwitcher imageSwitcher;
   private FirebaseStorage storage;
-
+    private FirebaseAuth autenticacao;
     private  FirebaseUser usuarioAtual;
 
     private List<Anuncios> listacioAnimais = new ArrayList<>();
@@ -79,6 +80,11 @@ private EditText nomeUsuario;
 
 
     }
+
+
+
+
+
     public  void entrarContato(View view){
 
         // intente para ir telefone diretamente
@@ -90,11 +96,19 @@ private EditText nomeUsuario;
     }
 
     public  void Chat(View v){
+        FirebaseUser user= usuarioAtual;
+        if (user!=null){
+            Intent it = new Intent(DetalhesAc.this, Chat.class);
+            startActivity(it);
 
-        Intent it = new Intent(DetalhesAc.this, Chat.class);
-        startActivity(it);
+        }
+        else {
 
+            Toast.makeText(DetalhesAc.this,
+                    "Vc não está cadastrado!",
+                    Toast.LENGTH_SHORT).show();
 
+        }
     }
     private  void iniciarCompo(){
        img=findViewById(R.id.carouse);

@@ -335,10 +335,10 @@ if(permissaoResultado== PackageManager.PERMISSION_DENIED){
     }
     private  void alertaPermissao(){
         AlertDialog.Builder bul = new AlertDialog.Builder(this);
-        bul.setTitle("Permissões Negagas");
+        bul.setTitle("Permissões Negadas");
         bul.setMessage("Para Usar o App é necessário aceitar as permissões");
         bul.setCancelable(false);
-        bul.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+        bul.setPositiveButton("Aceito", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 

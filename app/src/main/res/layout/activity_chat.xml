@@ -12,7 +12,7 @@
     <com.ogaclejapan.smarttablayout.SmartTabLayout
     android:id="@+id/viewPagerTab"
 
-        android:background="#030007"
+        android:background="#468AFD"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         app:stl_indicatorAlwaysInCenter="false"
@@ -23,8 +23,8 @@
         app:stl_indicatorColor="#FFF"
         app:stl_indicatorThickness="4dp"
         app:stl_indicatorWidth="auto"
-        app:stl_indicatorCornerRadius="2dp"
-        app:stl_overlineColor="#4D000000"
+
+        app:stl_overlineColor="#468AFD"
         app:stl_overlineThickness="0dp"
         app:stl_underlineColor="#4D000000"
         app:stl_underlineThickness="1dp"
